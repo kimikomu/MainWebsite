@@ -1,5 +1,4 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
 namespace MainWebsite
 {
@@ -8,6 +7,28 @@ namespace MainWebsite
         // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+#if !DEBUG
+            bundles.UseCdn = true;
+            BundleTable.EnableOptimizations = true;
+#endif
+            bundles.Add(new StyleBundle("~/bundles/bootstrapcss", "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+                .Include("~/Content/bootstrap.css",
+                    "~/Content/font-awesome.css",
+                    "~/Content/Site.css"));
+
+            bundles.Add(new StyleBundle("~/bundles/fonts", "https://fonts.googleapis.com/css?family=Merriweather:400,700"));
+
+
+            bundles.Add(new ScriptBundle("~/bundles/bootstrapjs", "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js")
+                .Include("~/Scripts/jquery-{version}.js",
+                    "~/Scripts/popper.js",
+                    "~/Scripts/jquery.validate*",
+                    "~/Scripts/jquery.validate.unobtrusive.js",
+                    "~/Scripts/modernizr-*",
+                    "~/Scripts/bootstrap.js",
+                    "~/Scripts/respond.js",
+                    "~/Scripts/scripts"));
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
@@ -21,11 +42,13 @@ namespace MainWebsite
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+                      "~/Scripts/respond.js",
+                      "~/Scripts/scripts"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/font-awesome.css",
+                      "~/Content/Site.css"));
         }
     }
 }

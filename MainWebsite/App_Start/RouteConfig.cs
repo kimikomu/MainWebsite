@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace MainWebsite
@@ -15,8 +11,26 @@ namespace MainWebsite
 
             routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{id}",
+                url: "{action}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+                name: "500Error",
+                url: "{controller}/{action}",
+                defaults: new { controller = "Error", action = "InternalServerError", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+                name: "400Error",
+                url: "{controller}/{action}",
+                defaults: new { controller = "Error", action = "NotFound", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+                name: "Error",
+                url: "{*url}",
+                defaults: new { controller = "Error", action = "Default", id = UrlParameter.Optional }
             );
         }
     }
