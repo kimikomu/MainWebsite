@@ -1,17 +1,57 @@
-﻿@{
+﻿@model MainWebsite.Models.EmailDetails
+
+@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<div class="center">
+    <h1>Contact Me!</h1>
+    <h3>Feel free to send me an email or fill out the form below</h3>
+    <h4>kimikomu@gmail.com</h4>
+</div>
+<br />
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+@using (Html.BeginForm(Model))
+{
+    <div class="form-container">
+        @*<div class="form-group">
+            <label>Name:</label>
+            @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.Name)
+        </div>*@
+        <div class="form-group">
+            <label>Message:</label>
+            @Html.TextAreaFor(x => x.Message, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.Message)
+        </div>
+        <div class="form-group">
+            <label>Email Address:</label>
+            @Html.TextBoxFor(x => x.EmailAddress, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.EmailAddress)
+        </div>
+
+        <h5>What is this in regards to?</h5>
+        <div class="custom-checkbox">
+            <label>
+                @Html.EditorFor(x => x.Website)
+                Website
+            </label>
+        </div>
+        <div class="custom-checkbox">
+            <label>
+                @Html.EditorFor(x => x.Audio)
+                Audio
+            </label>
+        </div>
+        <div class="custom-checkbox">
+            <label>
+                @Html.EditorFor(x => x.Programming)
+                Programming
+            </label>
+        </div>
+    </div>
+    <div id="email-button" class="text-center">
+        <input class="btn btn-dark" type="submit" value="Email Me!" />
+    </div>
+}
+

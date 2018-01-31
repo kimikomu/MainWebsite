@@ -8,23 +8,47 @@ namespace MainWebsite.Controllers
 {
     public class HomeController : Controller
     {
+        // GET: Home
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Resume()
         {
-            ViewBag.Message = "Your application description page.";
+            return View();
+        }
 
+        public ActionResult Code()
+        {
+            return View();
+        }
+
+        public ActionResult Sites()
+        {
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
+        }
+
+        // modal form
+        //public ViewResult Modal(EmailDetails emailDetails)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        return View("Code", "Home");
+        //    }
+        //    // return with validation error(s)
+        //    return View("Sites", "Home");
+        //}
+
+        // Temporary test for the 500 error
+        public ActionResult Test(int testInt)
+        {
+            return RedirectToAction("Index");
         }
     }
 }

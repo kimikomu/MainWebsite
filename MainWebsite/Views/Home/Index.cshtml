@@ -1,31 +1,64 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿
+@{
+    ViewBag.Title = "Index";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<h1>Welcome.</h1>
+<div class="d-md-inline-flex">
+    <div class="col-lg-6">
+        <p>
+            Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro. Nescio brains an Undead zombies. Sicut malus putrid voodoo horror. Nigh tofth eliv ingdead.
+        </p>
+        <a target="_blank" href="~/Content/Documents/kimiko-resume.pdf" alt="To Kimiko Muwanguzi's resume" class="resume-button resume-link btn btn-dark">
+            View Resume
+        </a>
+    </div>
+    <div class="col-spacer"></div>
+    <div class="col-lg-6">
+        <div id="profile-image-container">
+            <img class="img-fluid" src="~/Content/Images/kimiko.jpg" />
+        </div>
+    </div>
+</div>
+<div class="section-spacer"></div>
+<h1>Things I do.</h1>
+
+<div id="Sites">
+    <h3 class="section-header">Sites</h3>
+    <div class="d-sm-flex">
+        <div class="image-container">
+            <a href="@Url.Action("Sites", "Home")">
+                <img class="img-fluid" src="~/Content/Images/placeholder1.jpg" />
+            </a>
+        </div>
+        <h4 class="figcaption-right">Here is a collection of websites that I have worked on...</h4>
+    </div>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+<div class="section-spacer"></div>
+<div id="Sounds">
+    <h3 class="section-header">Sounds</h3>
+    <div class="d-sm-flex flex-md-row-reverse">
+        <div class="image-container">
+            <a href="http://www.muw-prod.com/kimikodev/sound/">
+                <img class="img-fluid" src="~/Content/Images/placeholder2.jpg" />
+            </a>
+        </div>
+        <h4 class="figcaption-left">This is a link to my sound design website...</h4>
     </div>
 </div>
+<div class="section-spacer"></div>
+<div id="Code">
+    <h3 class="section-header">Code</h3>
+    <div class="d-sm-flex">
+        <div class="image-container">
+            <a href="@Url.Action("Code", "Home")">
+                <img class="img-fluid" src="~/Content/Images/placeholder3.jpg" />
+            </a>
+        </div>
+        <h4 class="figcaption-right">Here are some coding projects I have worked on...</h4>
+    </div>
+</div>
+
+@*Temporary test for the 500 error*@
+<a href="@Url.Action("Test", "Home", new { testInt = "" })">Test 500</a>

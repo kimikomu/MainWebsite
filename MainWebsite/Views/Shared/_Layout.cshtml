@@ -7,14 +7,14 @@
     @Styles.Render("~/bundles/bootstrapcss", "~/bundles/fonts", "~/Content/css")
 </head>
 <body>
-    @*@Html.Partial("Navbar")*@
+    @Html.Partial("Navbar")
     <div class="container body-content">
         <div class="body-container">
             @RenderBody()
             @*@Html.Partial("Modal")*@
         </div>
     </div>
-    @*@Html.Partial("Icons")*@
+    @Html.Partial("Icons")
     @Html.Partial("Footer")
     @Scripts.Render("~/bundles/bootstrapjs", "~/bundles/jquery", "~/bundles/jqueryval", "~/bundles/modernizr", "~/bundles/bootstrap")
 </body>
