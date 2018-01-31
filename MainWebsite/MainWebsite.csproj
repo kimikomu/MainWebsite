@@ -192,10 +192,12 @@
     <Content Include="Views\Shared\Footer.cshtml" />
     <Content Include="Views\Home\Code.cshtml" />
     <Content Include="Views\Home\Sites.cshtml" />
+    <Content Include="Views\Error\Default.cshtml" />
+    <Content Include="Views\Error\InternalServerError.cshtml" />
+    <Content Include="Views\Error\NotFound.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Error\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

@@ -1,1 +1,62 @@
-﻿
+﻿@model MainWebsite.Models.EmailDetails
+
+
+<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h2 class="center" id="formModalLabel">Feel free to contact me at</h2>
+                <h3 class="center">kimikomu@gmail.com</h3>
+
+                @*@using (@Html.BeginForm())
+                        {
+                                <div class="form-container">
+                                    <div class="form-group">
+                                        <label>Name:</label>
+                                        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(x => x.Name)
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Message:</label>
+                                        @Html.TextAreaFor(x => x.Message, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(x => x.Message)
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Email Address:</label>
+                                        @Html.TextBoxFor(x => x.EmailAddress, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(x => x.EmailAddress)
+                                    </div>
+
+                                    <h5>What is this in regards to?</h5>
+                                    <div class="custom-checkbox">
+                                        <label>
+                                            @Html.EditorFor(x => x.Website)
+                                            Website
+                                        </label>
+                                    </div>
+                                    <div class="custom-checkbox">
+                                        <label>
+                                            @Html.EditorFor(x => x.Audio)
+                                            Audio
+                                        </label>
+                                    </div>
+                                    <div class="custom-checkbox">
+                                        <label>
+                                            @Html.EditorFor(x => x.Programming)
+                                            Programming
+                                        </label>
+                                    </div>
+                                </div>
+                                <div id="email-button" class="text-center">
+                                    <a class="btn btn-dark" type="submit" href="@Url.Action("Modal", "Home", new { emailDetails = Model })">Contact Me!</a>
+                                </div>
+                    }*@
+            </div>
+        </div>
+    </div>
+</div>
