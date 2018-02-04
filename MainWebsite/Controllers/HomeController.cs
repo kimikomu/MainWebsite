@@ -6,6 +6,8 @@ using System.Web;
 using System.Web.Helpers;
 using System.Web.Mvc;
 using MainWebsite.Models;
+using SendGrid;
+using SendGrid.Helpers.Mail;
 
 namespace MainWebsite.Controllers
 {
@@ -44,8 +46,15 @@ namespace MainWebsite.Controllers
             //string username = System.Web.Configuration.WebConfigurationManager.AppSettings["mailAccount"];
             //string password = System.Web.Configuration.WebConfigurationManager.AppSettings["mailPassword"];
 
-            string username = System.Configuration.ConfigurationManager.AppSettings["mailAccount"];
-            string password = System.Configuration.ConfigurationManager.AppSettings["mailPassword"];
+            //var username = System.Configuration.ConfigurationManager.AppSettings["mailAccount"];
+            //var password = System.Configuration.ConfigurationManager.AppSettings["mailPassword"];
+
+            var username = System.Environment.GetEnvironmentVariable("mailAccount");
+            var password = System.Environment.GetEnvironmentVariable("mailPassword");
+
+            var apiKey = System.Environment.GetEnvironmentVariable("SENDGRID_APIKEY");
+            var client = new SendGridClient(apiKey);
+
 
             StringBuilder emailBody = new StringBuilder()
             .AppendLine("An email from your site from ")
