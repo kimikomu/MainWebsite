@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
+using System.Web.Helpers;
 using System.Web.Mvc;
+using MainWebsite.Models;
 
 namespace MainWebsite.Controllers
 {
@@ -32,6 +35,53 @@ namespace MainWebsite.Controllers
         public ActionResult Contact()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Contact(EmailDetails emailDetails)
+        {
+
+            string username = System.Web.Configuration.WebConfigurationManager.AppSettings["mailAccount"];
+            string password = System.Web.Configuration.WebConfigurationManager.AppSettings["mailPassword"];
+
+            StringBuilder emailBody = new StringBuilder()
+            .AppendLine("An email from your site from ")
+                .AppendLine(emailDetails.Name);
+            emailBody.AppendLine("---");
+
+            emailBody.AppendLine(emailDetails.Message);
+            emailBody.AppendLine("---");
+            emailBody.AppendLine("Email Address: ")
+                .AppendLine(emailDetails.EmailAddress);
+            emailBody.AppendFormat(" -- Audio: {0} --",
+                    emailDetails.Audio ? "Yes" : "No");
+            emailBody.AppendFormat(" Website: {0} --",
+                    emailDetails.Website ? "Yes" : "No");
+            emailBody.AppendFormat(" Programming: {0} -- ",
+                    emailDetails.Programming ? "Yes" : "No");
+
+            try
+            {
+                WebMail.SmtpServer = "smtp.gmail.com";
+                WebMail.SmtpPort = 587;
+                WebMail.SmtpUseDefaultCredentials = true;
+                WebMail.EnableSsl = true;
+                WebMail.UserName = username;
+                WebMail.Password = password;
+
+                WebMail.From = emailDetails.EmailAddress;
+
+                WebMail.Send(username, "Email from you site from " + emailDetails.Name,
+                    emailBody.ToString());
+
+                ViewBag.Status = "Your email was successfully sent :)";
+            }
+            catch(Exception)
+            {
+                ViewBag.Status = "Problem while sending your email.";
+            }
+
+            return View("Thankyou", emailDetails);
         }
 
         // modal form

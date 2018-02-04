@@ -17,7 +17,7 @@ namespace MainWebsite.Models
         public string Message { get; set; }
 
         [Required(ErrorMessage = "Please enter your email address")]
-        [EmailAddress]
+        [EmailAddress(ErrorMessage = "Must be an email address.")]
         [StringLength(50, ErrorMessage = "Email cannot be longer than 50 characters.")]
         public string EmailAddress { get; set; }
 
