@@ -72,19 +72,33 @@ namespace MainWebsite.Controllers
             emailBody.AppendFormat(" Programming: {0} -- ",
                     emailDetails.Programming ? "Yes" : "No");
 
+
+
+            var message = new SendGridMessage()
+            {
+                From = new EmailAddress(emailDetails.EmailAddress, emailDetails.Name),
+                Subject = "New Email From Your Site",
+                PlainTextContent = emailBody.ToString()
+            };
+
+            message.AddTo(new EmailAddress(username, "Kimiko"));
+
+
             try
             {
-                WebMail.SmtpServer = "smtp.gmail.com";
-                WebMail.SmtpPort = 587;
-                WebMail.SmtpUseDefaultCredentials = true;
-                WebMail.EnableSsl = true;
-                WebMail.UserName = username;
-                WebMail.Password = password;
+                //WebMail.SmtpServer = "smtp.gmail.com";
+                //WebMail.SmtpPort = 587;
+                //WebMail.SmtpUseDefaultCredentials = true;
+                //WebMail.EnableSsl = true;
+                //WebMail.UserName = username;
+                //WebMail.Password = password;
 
-                WebMail.From = emailDetails.EmailAddress;
+                //WebMail.From = emailDetails.EmailAddress;
 
-                WebMail.Send(username, "Email from you site from " + emailDetails.Name,
-                    emailBody.ToString());
+                //WebMail.Send(username, "Email from you site from " + emailDetails.Name,
+                //    emailBody.ToString());
+
+                client.SendEmailAsync(message);
 
                 ViewBag.Status = "Your email was successfully sent :)";
             }
