@@ -42,29 +42,21 @@ namespace MainWebsite.Controllers
         [HttpPost]
         public ActionResult Contact(EmailDetails emailDetails)
         {
-
-            //string username = System.Web.Configuration.WebConfigurationManager.AppSettings["mailAccount"];
-            //string password = System.Web.Configuration.WebConfigurationManager.AppSettings["mailPassword"];
-
-            //var username = System.Configuration.ConfigurationManager.AppSettings["mailAccount"];
-            //var password = System.Configuration.ConfigurationManager.AppSettings["mailPassword"];
-
-            var username = System.Environment.GetEnvironmentVariable("mailAccount");
-            var password = System.Environment.GetEnvironmentVariable("mailPassword");
-
+            var myEmailAccount = System.Environment.GetEnvironmentVariable("mailAccount");
             var apiKey = System.Environment.GetEnvironmentVariable("SENDGRID_APIKEY");
             var client = new SendGridClient(apiKey);
 
-
             StringBuilder emailBody = new StringBuilder()
-            .AppendLine("An email from your site from ")
+            .AppendLine("You have recieved an email from your site from ")
                 .AppendLine(emailDetails.Name);
-            emailBody.AppendLine("---");
-
+            emailBody.Append(Environment.NewLine);
             emailBody.AppendLine(emailDetails.Message);
-            emailBody.AppendLine("---");
+            emailBody.Append(Environment.NewLine);
             emailBody.AppendLine("Email Address: ")
                 .AppendLine(emailDetails.EmailAddress);
+            emailBody.Append(Environment.NewLine);
+            emailBody.Append("-----------------------------------------------");
+            emailBody.Append(Environment.NewLine);
             emailBody.AppendFormat(" -- Audio: {0} --",
                     emailDetails.Audio ? "Yes" : "No");
             emailBody.AppendFormat(" Website: {0} --",
@@ -72,32 +64,16 @@ namespace MainWebsite.Controllers
             emailBody.AppendFormat(" Programming: {0} -- ",
                     emailDetails.Programming ? "Yes" : "No");
 
-
-
             var message = new SendGridMessage()
             {
                 From = new EmailAddress(emailDetails.EmailAddress, emailDetails.Name),
                 Subject = "New Email From Your Site",
                 PlainTextContent = emailBody.ToString()
             };
-
-            message.AddTo(new EmailAddress(username, "Kimiko"));
-
+            message.AddTo(new EmailAddress(myEmailAccount, "Kimiko"));
 
             try
             {
-                //WebMail.SmtpServer = "smtp.gmail.com";
-                //WebMail.SmtpPort = 587;
-                //WebMail.SmtpUseDefaultCredentials = true;
-                //WebMail.EnableSsl = true;
-                //WebMail.UserName = username;
-                //WebMail.Password = password;
-
-                //WebMail.From = emailDetails.EmailAddress;
-
-                //WebMail.Send(username, "Email from you site from " + emailDetails.Name,
-                //    emailBody.ToString());
-
                 client.SendEmailAsync(message);
 
                 ViewBag.Status = "Your email was successfully sent :)";
