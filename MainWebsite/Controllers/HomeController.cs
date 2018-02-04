@@ -41,8 +41,11 @@ namespace MainWebsite.Controllers
         public ActionResult Contact(EmailDetails emailDetails)
         {
 
-            string username = System.Web.Configuration.WebConfigurationManager.AppSettings["mailAccount"];
-            string password = System.Web.Configuration.WebConfigurationManager.AppSettings["mailPassword"];
+            //string username = System.Web.Configuration.WebConfigurationManager.AppSettings["mailAccount"];
+            //string password = System.Web.Configuration.WebConfigurationManager.AppSettings["mailPassword"];
+
+            string username = System.Configuration.ConfigurationManager.AppSettings["mailAccount"];
+            string password = System.Configuration.ConfigurationManager.AppSettings["mailPassword"];
 
             StringBuilder emailBody = new StringBuilder()
             .AppendLine("An email from your site from ")
