@@ -14,7 +14,7 @@ namespace MainWebsite
             bundles.Add(new StyleBundle("~/bundles/bootstrapcss", "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
                 .Include("~/Content/bootstrap.min.css",
                     "~/Content/font-awesome.min.css",
-                    "~/Content/Site.css"));
+                    "~/Content/Site.min.css"));
 
             bundles.Add(new StyleBundle("~/bundles/fonts", "https://fonts.googleapis.com/css?family=Bree+Serif"));
 
@@ -52,7 +52,7 @@ namespace MainWebsite
             bundles.Add(new StyleBundle("~/bundles/css").Include(
                       "~/Content/bootstrap.min.css",
                       "~/Content/font-awesome.min.css",
-                      "~/Content/Site.css"));
+                      "~/Content/Site.min.css"));
         }
     }
 }

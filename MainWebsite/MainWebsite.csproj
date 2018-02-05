@@ -178,6 +178,7 @@
     <Content Include="Content\Images\sound.jpg" />
     <Content Include="Content\Images\site.jpg" />
     <Content Include="Content\Images\kimiko.jpg" />
+    <Content Include="Content\Site.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
