@@ -16,7 +16,7 @@ namespace MainWebsite
                     "~/Content/font-awesome.css",
                     "~/Content/Site.css"));
 
-            bundles.Add(new StyleBundle("~/bundles/fonts", "https://fonts.googleapis.com/css?family=Merriweather:400,700"));
+            bundles.Add(new StyleBundle("~/bundles/fonts", "https://fonts.googleapis.com/css?family=Bree+Serif"));
 
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrapjs", "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js")

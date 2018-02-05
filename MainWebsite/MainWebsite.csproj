@@ -173,10 +173,11 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\Images\oops.jpg" />
+    <Content Include="Content\Images\code.jpg" />
+    <Content Include="Content\Images\sound.jpg" />
+    <Content Include="Content\Images\site.jpg" />
     <Content Include="Content\Images\kimiko.jpg" />
-    <Content Include="Content\Images\placeholder1.jpg" />
-    <Content Include="Content\Images\placeholder2.jpg" />
-    <Content Include="Content\Images\placeholder3.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />

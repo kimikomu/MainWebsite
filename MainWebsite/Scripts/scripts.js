@@ -1,52 +1,4 @@
-﻿//var globalID;
-
-//function repeatOften() {
-//    $("<div class='test-anim'>404</div>").appendTo("body");
-//    globalID = requestAnimationFrame(repeatOften);
-//}
-
-//globalID = requestAnimationFrame(repeatOften);
-
-//$("#start").on("click", function () {
-//    globalID = requestAnimationFrame(repeatOften);
-//});
-
-//$("#stop").on("click", function () {
-//    cancelAnimationFrame(globalID);
-//});
-
-
-//$("span").on("click", function () {
-
-//    $(".icons").hide();
-//    const element = document.querySelector("span");
-//    const finalPosition = 600;
-
-//    const time = {
-//        start: performance.now(),
-//        total: 2000
-//    };
-
-//    const tick = now => {
-//        time.elapsed = now - time.start;
-//        const progress = getProgress(time);
-//        const position = progress * finalPosition;
-//        element.style.transform = `translate(${position}px)`;
-//        if (progress < 1) {
-//            requestAnimationFrame(tick);
-//        };
-//    };
-//    requestAnimationFrame(tick);
-//});
-
-
-//$(".icons").click(function () {
-
-//    $(this).attr("class", "bounce");
-//    $(".bounce").animate({ right: '600px' });
-//});
-
-
+﻿
 $(".icons").click(function () {
 
     let moveNum = Math.floor((Math.random() * 900) + - 250);
@@ -55,44 +7,43 @@ $(".icons").click(function () {
     $(this).attr("class", "bounce");
 
     $(".bounce").animate({ right: moveNum });
-    $(".bounce").animate({ top: '600px' });
-
-    doBounce($(this), bounceNum, '150px', 400);
+    $(".bounce").animate({ top: '2000px' });
 });
 
 $(".navbar-brand").click(function () {
 
-    let randomNum = Math.floor((Math.random() * 400) + 1);
-
     $(this).attr("class", "bounce");
 
-    $(".bounce").animate({ right: randomNum });
-    $(".bounce").animate({ top: '600px' });
+    $(".bounce").animate({ top: '2000px' });
 });
 
 $(".nav-item").click(function () {
     $(this).attr("class", "bounce");
 
-    $(".bounce").animate({ top: '600px' });
+    $(".bounce").animate({ top: '2000px' });
+});
+
+$(".error-button").click(function () {
+    $(this).attr("class", "bounce");
+
+    $(".bounce").animate({ top: '2000px' });
 });
 
 $(".error-message").click(function () {
 
-    let bounceNum = Math.floor((Math.random() * 20) + 6);
-
     $(this).attr("class", "bounce");
 
-    $(".bounce").animate({ bottom: '-400px' });
+    $(".bounce").animate({ left: '5000px' });
 
-    doBounce($(this), bounceNum, '150px', 400);
+    //doBounce($(this), bounceNum, '150px', 400);
 });
 
-function doBounce(element, times, distance, speed) {
-    for (var i = 0; i < times; i++) {
-        element.animate({ marginTop: '-=' + distance }, speed)
-            .animate({ marginTop: '+=' + distance }, speed);
-    }
-}
+//function doBounce(element, times, distance, speed) {
+//    for (var i = 0; i < times; i++) {
+//        element.animate({ marginTop: '-=' + distance }, speed)
+//            .animate({ marginTop: '+=' + distance }, speed);
+//    }
+//}
 
 
 
