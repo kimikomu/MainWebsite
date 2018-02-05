@@ -12,8 +12,8 @@ namespace MainWebsite
             BundleTable.EnableOptimizations = true;
 #endif
             bundles.Add(new StyleBundle("~/bundles/bootstrapcss", "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
-                .Include("~/Content/bootstrap.css",
-                    "~/Content/font-awesome.css",
+                .Include("~/Content/bootstrap.min.css",
+                    "~/Content/font-awesome.min.css",
                     "~/Content/Site.css"));
 
             bundles.Add(new StyleBundle("~/bundles/fonts", "https://fonts.googleapis.com/css?family=Bree+Serif"));
@@ -21,12 +21,12 @@ namespace MainWebsite
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrapjs", "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js")
                 .Include("~/Scripts/jquery-{version}.js",
-                    "~/Scripts/popper.js",
+                    "~/Scripts/popper.min.js",
                     "~/Scripts/jquery.validate*",
-                    "~/Scripts/jquery.validate.unobtrusive.js",
+                    "~/Scripts/jquery.validate.unobtrusive.min.js",
                     "~/Scripts/modernizr-*",
-                    "~/Scripts/bootstrap.js",
-                    "~/Scripts/respond.js"));
+                    "~/Scripts/bootstrap.min.js",
+                    "~/Scripts/respond.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
@@ -43,15 +43,15 @@ namespace MainWebsite
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+                      "~/Scripts/bootstrap.min.js",
+                      "~/Scripts/respond.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/customscripts").Include(
                       "~/Scripts/scripts"));
 
             bundles.Add(new StyleBundle("~/bundles/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/font-awesome.css",
+                      "~/Content/bootstrap.min.css",
+                      "~/Content/font-awesome.min.css",
                       "~/Content/Site.css"));
         }
     }
