@@ -26,14 +26,16 @@ namespace MainWebsite
                     "~/Scripts/jquery.validate.unobtrusive.js",
                     "~/Scripts/modernizr-*",
                     "~/Scripts/bootstrap.js",
-                    "~/Scripts/respond.js",
-                    "~/Scripts/scripts"));
+                    "~/Scripts/respond.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
+
+            bundles.Add(new ScriptBundle("~/bundles/customscripts").Include(
+                        "~/Scripts/scripts"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
@@ -42,10 +44,12 @@ namespace MainWebsite
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js",
+                      "~/Scripts/respond.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/customscripts").Include(
                       "~/Scripts/scripts"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
+            bundles.Add(new StyleBundle("~/bundles/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/font-awesome.css",
                       "~/Content/Site.css"));

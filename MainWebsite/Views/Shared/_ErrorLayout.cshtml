@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KM | @ViewBag.Title</title>
+    @Styles.Render("~/bundles/bootstrapcss", "~/bundles/fonts", "~/bundles/css")
+</head>
+<body>
+    @Html.Partial("ErrorNavbar")
+    <div class="container body-content">
+        <div class="body-container">
+            @RenderBody()
+        </div>
+    </div>
+    @Html.Partial("ErrorIcons")
+    @Html.Partial("Footer")
+    @Scripts.Render("~/bundles/bootstrapjs", "~/bundles/jquery", "~/bundles/jqueryval", "~/bundles/modernizr", "~/bundles/bootstrap")
+    <script src="~/Scripts/scripts.js"></script>
+</body>
+</html>

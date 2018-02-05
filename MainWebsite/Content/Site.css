@@ -219,6 +219,22 @@ a:focus {
     margin-top: 20px;
 }
 
+/************************** 
+    Error Styles
+***************************/
+
+.bounce {
+    position: absolute;
+}
+
+.bounce a {
+    color: #ef7016 !important;
+}
+
+
+.error-message {
+    margin: 150px 0;   
+}
 
 /************************** 
     Media Queries

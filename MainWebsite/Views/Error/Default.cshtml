@@ -1,7 +1,10 @@
 ﻿
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_ErrorLayout.cshtml";
 }
 
-<h2>Something went terribly wrong!</h2>
-
+<div class="center error-message">
+    <h1>Something went terribly wrong!</h1>
+</div>
+<a class="btn btn-dark" href="/">Back</a>

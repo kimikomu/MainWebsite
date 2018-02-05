@@ -1,7 +1,11 @@
 ﻿
 @{
-    ViewBag.Title = "500";
+    ViewBag.Title = "500 Error";
+    Layout = "~/Views/Shared/_ErrorLayout.cshtml";
 }
 
-<h2>500 Internal Server Error</h2>
+<div class="canter error-message">
+    <h1>500 Internal Server Error</h1>
+</div>
+<a class="btn btn-dark" href="/">Back</a>
 
