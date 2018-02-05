@@ -23,9 +23,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KM | @ViewBag.Title</title>
-    @*<link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">*@
-    @*<link href="~/Content/Site.css" rel="stylesheet">*@
-    @*@Styles.Render("~/bundles/bootstrapcss", "~/bundles/fonts", "~/Content/css")*@
     @Styles.Render("~/bundles/bootstrapcss", "~/bundles/fonts", "~/bundles/css")
 </head>
 <body>
@@ -33,7 +30,6 @@
     <div class="container body-content">
         <div class="body-container">
             @RenderBody()
-            @Html.Partial("Modal")
         </div>
     </div>
     @Html.Partial("Icons")

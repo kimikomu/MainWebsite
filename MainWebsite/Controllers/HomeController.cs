@@ -80,7 +80,7 @@ namespace MainWebsite.Controllers
             }
             catch(Exception)
             {
-                ViewBag.Status = "Problem while sending your email.";
+                ViewBag.Status = "Unfortunately, there was a problem sending your email.";
             }
 
             return View("Thankyou", emailDetails);

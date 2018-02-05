@@ -1,4 +1,4 @@
-﻿
+﻿// icons move and fall off the page
 $(".icons").click(function () {
 
     let moveNum = Math.floor((Math.random() * 900) + - 250);
@@ -10,6 +10,7 @@ $(".icons").click(function () {
     $(".bounce").animate({ top: '2000px' });
 });
 
+// elements fall off the page
 $(".navbar-brand").click(function () {
 
     $(this).attr("class", "bounce");
@@ -29,6 +30,7 @@ $(".error-button").click(function () {
     $(".bounce").animate({ top: '2000px' });
 });
 
+// error header flies off the page
 $(".error-message").click(function () {
 
     $(this).attr("class", "bounce");
@@ -38,6 +40,8 @@ $(".error-message").click(function () {
     //doBounce($(this), bounceNum, '150px', 400);
 });
 
+
+// TODO: Incorporate bounce effect
 //function doBounce(element, times, distance, speed) {
 //    for (var i = 0; i < times; i++) {
 //        element.animate({ marginTop: '-=' + distance }, speed)
