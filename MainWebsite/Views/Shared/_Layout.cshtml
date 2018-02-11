@@ -1,16 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    @*<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113353848-1"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
 
-          gtag('config', 'UA-113353848-1');
-        </script>*@
-    <!-- Google Analytics -->
     <!-- Google Analytics -->
     <script>
         window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
@@ -34,6 +25,7 @@
     </div>
     @Html.Partial("Icons")
     @Html.Partial("Footer")
-    @Scripts.Render("~/bundles/bootstrapjs", "~/bundles/jquery", "~/bundles/jqueryval", "~/bundles/modernizr", "~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/modernizr", "~/bundles/bootstrapjs", 
+    "~/bundles/jquery", "~/bundles/jqueryval", "~/bundles/jqueryvalunob", "~/bundles/customscripts")
 </body>
 </html>
