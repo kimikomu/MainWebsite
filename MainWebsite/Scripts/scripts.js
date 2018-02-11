@@ -1,13 +1,15 @@
-﻿// icons move and fall off the page
+﻿// TODO
+// document.ready
+// create new class
+// data attr?
+
+// icons move and fall off the page
 $(".icons").click(function () {
 
     let moveNum = Math.floor((Math.random() * 900) + - 250);
     let bounceNum = Math.floor((Math.random() * 20) + 6);
 
-    $(this).attr("class", "bounce");
-
-    $(".bounce").animate({ right: moveNum });
-    $(".bounce").animate({ top: '2000px' });
+    $(this).attr("class", "bounce").animate({ right: moveNum, top: '2000px'});
 });
 
 // elements fall off the page
@@ -39,7 +41,9 @@ $(".error-message").click(function () {
 
     //doBounce($(this), bounceNum, '150px', 400);
 });
-
+// TODO: make error.js
+// TODO: max-with window browser to opposite anim. end when 200px below browser height
+// TODO: google-ana.js module pattern
 
 // TODO: Incorporate bounce effect
 //function doBounce(element, times, distance, speed) {

@@ -11,6 +11,7 @@ namespace MainWebsite
             bundles.UseCdn = true;
             BundleTable.EnableOptimizations = true;
 #endif
+            // TODO: fix bundling to bring in from CDN
             bundles.Add(new StyleBundle("~/bundles/bootstrapcss", "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
                 .Include("~/Content/bootstrap.min.css",
                     "~/Content/font-awesome.min.css",
@@ -39,20 +40,20 @@ namespace MainWebsite
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
-            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/modernizr-*"));
+            //bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
+            //            "~/Scripts/modernizr-*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.min.js",
-                      "~/Scripts/respond.min.js"));
+            //bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+            //          "~/Scripts/bootstrap.min.js",
+            //          "~/Scripts/respond.min.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/customscripts").Include(
-                      "~/Scripts/scripts"));
+            //bundles.Add(new ScriptBundle("~/bundles/customscripts").Include(
+            //          "~/Scripts/scripts"));
 
-            bundles.Add(new StyleBundle("~/bundles/css").Include(
-                      "~/Content/bootstrap.min.css",
-                      "~/Content/font-awesome.min.css",
-                      "~/Content/Site.min.css"));
+            //bundles.Add(new StyleBundle("~/bundles/css").Include(
+            //          "~/Content/bootstrap.min.css",
+            //          "~/Content/font-awesome.min.css",
+            //          "~/Content/Site.min.css"));
         }
     }
 }

@@ -128,6 +128,8 @@ a:focus {
     margin: auto 2em;
 }
 
+/*TODO: break out each css file by type of element. individual views should have their own css file*/
+
 .icon-container {
     position: fixed;
     top: 100px;
@@ -177,6 +179,7 @@ a:focus {
     margin: 20px 0;
 }
 
+/*DRY*/
 .container-left {
     width: 45%;
     margin-right: 5%;
