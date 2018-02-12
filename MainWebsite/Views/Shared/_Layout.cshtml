@@ -25,7 +25,8 @@
     </div>
     @Html.Partial("Icons")
     @Html.Partial("Footer")
-    @Scripts.Render("~/bundles/modernizr", "~/bundles/bootstrapjs", 
-    "~/bundles/jquery", "~/bundles/jqueryval", "~/bundles/jqueryvalunob", "~/bundles/customscripts")
+    @Scripts.Render("~/bundles/modernizr", "~/bundles/bootstrapjs",
+        "~/bundles/jquery", "~/bundles/jqueryval", "~/bundles/jqueryvalunob", "~/bundles/customscripts")
+    @RenderSection("Scripts", false)
 </body>
 </html>

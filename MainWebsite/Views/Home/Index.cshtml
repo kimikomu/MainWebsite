@@ -9,7 +9,8 @@
         <p>
             Welcome to my website! My name is Kimiko and I am a creative developer, sound designer, video game enthusiast, and family gal. I am fascinated and curious about a great many things, from new technoligies to story theory to the patters we see in people and societies. I think it is important to stretch ourselves as a human beings, and that it is better to fail and to have tried than to have not tried at all. Please feel free to take a look at the various projects I've worked on, or to contact me if you are interested in a respectful createive collaboration. Take care.
         </p>
-        <a onclick="ga('send', 'event', 'View Resume', 'click');" target="_blank" href="~/Content/Documents/kimiko-resume.pdf" alt="To Kimiko Muwanguzi's resume" class="resume-button resume-link btn btn-dark">
+        @*CODE REVIEW TODO: module pattern*@
+        <a class="resume-button resume-link btn btn-dark ga" href="~/Content/Documents/kimiko-resume.pdf" target="_blank" alt="To Kimiko Muwanguzi's resume">
             View Resume
         </a>
     </div>
@@ -62,3 +63,14 @@
 
 @*Temporary test for the 500 error*@
 @*<a href="@Url.Action("Test", "Home", new { testInt = "" })">Test 500</a>*@
+
+@section Scripts
+{
+    <script>
+        $(document).ready(function () {
+            $('.ga').click(function () {
+                alert("GA click").ga('send', 'event', 'View Resume', 'click');
+            });
+        });
+    </script>
+}
