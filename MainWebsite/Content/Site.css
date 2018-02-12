@@ -128,7 +128,7 @@ a:focus {
     margin: auto 2em;
 }
 
-/*TODO: break out each css file by type of element. individual views should have their own css file*/
+/*CODE REVIEW TODO: break out each css file by type of element. individual views should have their own css file*/
 
 .icon-container {
     position: fixed;

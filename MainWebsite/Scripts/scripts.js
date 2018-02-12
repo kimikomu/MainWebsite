@@ -1,4 +1,4 @@
-﻿// TODO
+﻿// CODE REVIEW TODO
 // document.ready
 // create new class
 // data attr?
@@ -41,11 +41,11 @@ $(".error-message").click(function () {
 
     //doBounce($(this), bounceNum, '150px', 400);
 });
-// TODO: make error.js
-// TODO: max-with window browser to opposite anim. end when 200px below browser height
-// TODO: google-ana.js module pattern
+// CODE REVIEW TODO: make error.js
+// CODE REVIEW TODO: max-with window browser to opposite anim. end when 200px below browser height
+// CODE REVIEW TODO: google-ana.js module pattern
 
-// TODO: Incorporate bounce effect
+// CODE REVIEW TODO: Incorporate bounce effect
 //function doBounce(element, times, distance, speed) {
 //    for (var i = 0; i < times; i++) {
 //        element.animate({ marginTop: '-=' + distance }, speed)

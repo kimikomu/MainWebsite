@@ -33,7 +33,7 @@ namespace MainWebsite.Controllers
             return View();
         }
 
-        // TODO: Questions - 1. How is this conversion into an async controller? Is it better to rename Contact to ContactAsync and reroute the submit from the Contact View, or leave as is?
+        // CODE REVIEW TODO: Questions - 1. How is this conversion into an async controller? Is it better to rename Contact to ContactAsync and reroute the submit from the Contact View, or leave as is?
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Contact(EmailDetails emailDetails, EmailProcessor emailProcessor)
