@@ -45,12 +45,18 @@ namespace MainWebsite.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Contact(EmailDetails emailDetails)
         {
+            // for debug
+            //var myEmailAccount = System.Configuration.ConfigurationManager.AppSettings["mailAccount"];
+            //var apiKey = System.Configuration.ConfigurationManager.AppSettings["SENDGRID_APIKEY"];
+
+            // for live deployment
+            var myEmailAccount = System.Environment.GetEnvironmentVariable("mailAccount");
+            var apiKey = System.Environment.GetEnvironmentVariable("SENDGRID_APIKEY");
+
+            var client = new SendGridClient(apiKey);
+
             if (ModelState.IsValid)
             {
-                var myEmailAccount = System.Environment.GetEnvironmentVariable("mailAccount");
-                var apiKey = System.Environment.GetEnvironmentVariable("SENDGRID_APIKEY");
-                var client = new SendGridClient(apiKey);
-
                 StringBuilder emailBody = new StringBuilder()
                 .AppendLine("You have recieved an email from your site from ")
                     .AppendLine(emailDetails.Name);
@@ -90,15 +96,7 @@ namespace MainWebsite.Controllers
                 return View("Thankyou", emailDetails);
             };
 
-            // send an empty form to the view if model state is invalid
-            var emptyEmail = new EmailDetails
-            {
-                Name = "",
-                Message = "",
-                EmailAddress = ""
-            };
-
-            return View("Contact", emptyEmail);
+            return View("Contact");
         }
 
         // modal form
