@@ -36,8 +36,11 @@ namespace MainWebsite
             bundles.Add(new ScriptBundle("~/bundles/jqueryvalunob", "https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js")
                 .Include("~/Scripts/jquery.validate.unobtrusive.min.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/customscripts")
-                .Include("~/Scripts/scripts-*"));
+            bundles.Add(new ScriptBundle("~/bundles/googleanalytics")
+                .Include("~/Scripts/scripts-google-analytics.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/pagenotfound")
+                .Include("~/Scripts/scripts-page-not-found.js"));
         }
     }
 }

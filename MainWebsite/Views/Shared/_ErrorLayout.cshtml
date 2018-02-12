@@ -23,7 +23,10 @@
     </div>
     @Html.Partial("ErrorIcons")
     @Html.Partial("Footer")
-    @Scripts.Render("~/bundles/bootstrapjs", "~/bundles/jquery", "~/bundles/jqueryval", "~/bundles/modernizr", "~/bundles/bootstrap")
-    <script src="~/Scripts/scripts.js"></script>
+    @Scripts.Render("~/bundles/modernizr", "~/bundles/bootstrapjs",
+            "~/bundles/jquery", "~/bundles/jqueryval", "~/bundles/jqueryvalunob")
+    @RenderSection("Scripts", false)
 </body>
 </html>
+
+
