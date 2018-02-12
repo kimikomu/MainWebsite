@@ -23,11 +23,20 @@
 
     @*CODE REVIEW TODO: icons.js with module pattern*@
     <div class="icons">
-        <a onclick="ga('send', 'event', 'View Resume Icon', 'click');" class="" target="_blank" href="~/Content/Documents/kimiko-resume.pdf" alt="To Kimiko Muwanguzi's resume">
+        <a id="resume-icon" class="" target="_blank" href="~/Content/Documents/kimiko-resume.pdf" alt="To Kimiko Muwanguzi's resume">
             <i class="fa fa-3x fa-file-text"></i>
         </a>
     </div>
 </div>
 
-
+@section Scripts
+{
+    <script>
+        $(document).ready(function () {
+            $('#resume-icon').click(function () {
+                ga('send', 'event', 'View Resume Icon', 'click');
+            });
+        });
+    </script>
+}
 

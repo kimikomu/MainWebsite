@@ -10,7 +10,7 @@
             Welcome to my website! My name is Kimiko and I am a creative developer, sound designer, video game enthusiast, and family gal. I am fascinated and curious about a great many things, from new technoligies to story theory to the patters we see in people and societies. I think it is important to stretch ourselves as a human beings, and that it is better to fail and to have tried than to have not tried at all. Please feel free to take a look at the various projects I've worked on, or to contact me if you are interested in a respectful createive collaboration. Take care.
         </p>
         @*CODE REVIEW TODO: module pattern*@
-        <a class="resume-button resume-link btn btn-dark ga" href="~/Content/Documents/kimiko-resume.pdf" target="_blank" alt="To Kimiko Muwanguzi's resume">
+        <a id="resume-button" class="resume-button resume-link btn btn-dark" href="~/Content/Documents/kimiko-resume.pdf" target="_blank" alt="To Kimiko Muwanguzi's resume">
             View Resume
         </a>
     </div>
@@ -68,7 +68,7 @@
 {
     <script>
         $(document).ready(function () {
-            $('.ga').click(function () {
+            $('#resume-button').click(function () {
                 ga('send', 'event', 'View Resume Index', 'click');
             });
         });
