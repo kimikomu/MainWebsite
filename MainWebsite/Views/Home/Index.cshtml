@@ -67,10 +67,8 @@
 @section Scripts
 {
     <script>
-        $(document).ready(function () {
-            $('#resume-button').click(function () {
-                ga('send', 'event', 'View Resume Index', 'click');
-            });
-        });
+        (function (helper) {
+            helper.onready();
+        })(gaHelper);
     </script>
 }

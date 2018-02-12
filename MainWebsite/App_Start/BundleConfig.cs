@@ -37,7 +37,7 @@ namespace MainWebsite
                 .Include("~/Scripts/jquery.validate.unobtrusive.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/customscripts")
-                .Include("~/Scripts/scripts"));
+                .Include("~/Scripts/scripts-*"));
         }
     }
 }

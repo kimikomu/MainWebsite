@@ -1,7 +1,7 @@
 ﻿var gaHelper = (function ($) {
     "use strict";
+
     var module = {
-        notificationDetailsUrl: null,
         onready: function () {
             var keys = Object.keys(this);
             var keysLength = keys.length;
@@ -10,11 +10,13 @@
                     throw new Error(keys[i] + " needs to be initialized.");
                 }
             }
+
+            var resumeButton = $("#resume-button");
+
+            resumeButton.click(function () {
+                ga('send', 'event', 'View Resume Index', 'click');
+            });
         }
-
-        var onclick="ga('send', 'event', 'View Resume', 'click');"
-
-
     };
     return module;
 })(jQuery);
