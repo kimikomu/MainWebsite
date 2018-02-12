@@ -26,5 +26,7 @@ namespace MainWebsite.Models
         public bool Audio { get; set; }
 
         public bool Programming { get; set; }
+
+        public string StatusMessage { get; set; }
     }
 }
