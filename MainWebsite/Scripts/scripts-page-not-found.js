@@ -9,10 +9,9 @@ $(document).ready(function () {
     $(".error-anim").click(function () {
 
         if ($(this).parent().hasClass("icons")) {
-            let moveNum = Math.floor((Math.random() * 900) + - 250);
-            let bounceNum = Math.floor((Math.random() * 1000));
+            let bounceNum = Math.floor((Math.random() * 1200));
             let windowWidth = $(window).width();
-            let bounceHeight = $(window).height() * 1.5;
+            let bounceHeight = $(window).height() * 2;
 
             $(this).parent().attr("class", "bounce").animate({ right: windowWidth, bottom: bounceHeight }, bounceNum);
             $(this).parent().attr("class", "bounce").animate({ left: windowWidth, bottom: bounceHeight * 0.6 }, bounceNum);           
