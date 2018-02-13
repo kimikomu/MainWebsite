@@ -22,6 +22,16 @@
         <div class="body-container">
             @RenderBody()
         </div>
+        <div class="error-page-container">
+            <div class="error-image-container center">
+                <a href="/">
+                    <img class="img-fluid image-shadow-box" src="~/Content/Images/oops.jpg" />
+                </a>
+            </div>
+            <div class="center">
+                <a class="btn btn-dark error-button error-anim" href="#">Back</a>
+            </div>
+        </div>
     </div>
     @Html.Partial("Icons")
     @Html.Partial("Footer")

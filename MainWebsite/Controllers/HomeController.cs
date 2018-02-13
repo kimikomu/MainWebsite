@@ -7,7 +7,6 @@ namespace MainWebsite.Controllers
 {
     public class HomeController : Controller
     {   
-        // GET: Home
         public ActionResult Index()
         {
             return View();
@@ -33,7 +32,6 @@ namespace MainWebsite.Controllers
             return View();
         }
 
-        // CODE REVIEW TODO: Questions - 1. How is this conversion into an async controller? Is it better to rename Contact to ContactAsync and reroute the submit from the Contact View, or leave as is?
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Contact(EmailDetails emailDetails, EmailProcessor emailProcessor)

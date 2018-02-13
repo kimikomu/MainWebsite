@@ -148,6 +148,9 @@ a:focus {
 .image-shadow-box {
     box-shadow: 5px 5px 8px #26292b;
 }
+.error-page-container {
+    display: none;
+}
 
 /*navbar*/
 .navbar {
