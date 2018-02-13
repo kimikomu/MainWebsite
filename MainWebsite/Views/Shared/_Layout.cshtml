@@ -17,7 +17,7 @@
     @RenderSection("Styles", false)
 </head>
 <body>
-    @Html.Partial("Navbar")
+    @Html.Partial("_Navbar")
     <div class="container body-content">
         <div class="body-container">
             @RenderBody()
@@ -33,8 +33,8 @@
             </div>
         </div>
     </div>
-    @Html.Partial("Icons")
-    @Html.Partial("Footer")
+    @Html.Partial("_Icons")
+    @Html.Partial("_Footer")
     @Scripts.Render("~/bundles/modernizr", "~/bundles/jquery", "~/bundles/jqueryval", 
         "~/bundles/jqueryvalunob", "~/bundles/bootstrapjs")
     @RenderSection("Scripts", false)

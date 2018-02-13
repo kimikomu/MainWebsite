@@ -256,9 +256,9 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Shared\Navbar.cshtml" />
-    <Content Include="Views\Shared\Icons.cshtml" />
-    <Content Include="Views\Shared\Footer.cshtml" />
+    <Content Include="Views\Shared\_Navbar.cshtml" />
+    <Content Include="Views\Shared\_Icons.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Home\Code.cshtml" />
     <Content Include="Views\Home\Sites.cshtml" />
     <Content Include="Views\Error\Default.cshtml" />
