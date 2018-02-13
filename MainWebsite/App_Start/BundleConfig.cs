@@ -11,21 +11,6 @@ namespace MainWebsite
             bundles.UseCdn = true;
             BundleTable.EnableOptimizations = true;
 #endif
-            bundles.Add(new StyleBundle("~/bundles/bootstrapcss", "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
-                .Include("~/Content/bootstrap.min.css"));
-
-            bundles.Add(new StyleBundle("~/bundles/fonts", "https://fonts.googleapis.com/css?family=Bree+Serif"));
-
-            bundles.Add(new StyleBundle("~/bundles/css")
-                .Include("~/Content/font-awesome.min.css",
-                "~/Content/Site.min.css"));
-
-            bundles.Add(new ScriptBundle("~/bundles/modernizr", "https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js")
-                .Include("~/Scripts/modernizr-*"));
-
-            bundles.Add(new ScriptBundle("~/bundles/bootstrapjs", "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js")
-                .Include("~/Scripts/bootstrap.bundle.min.js",
-                "~/Scripts/respond.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jquery", "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.min.js")
                 .Include("~/Scripts/jquery-{version}.js"));
@@ -36,11 +21,36 @@ namespace MainWebsite
             bundles.Add(new ScriptBundle("~/bundles/jqueryvalunob", "https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js")
                 .Include("~/Scripts/jquery.validate.unobtrusive.min.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/modernizr", "https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js")
+                .Include("~/Scripts/modernizr-*"));
+
+            bundles.Add(new ScriptBundle("~/bundles/bootstrapjs", "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js")
+                .Include("~/Scripts/bootstrap.bundle.min.js",
+                "~/Scripts/respond.min.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/googleanalytics")
                 .Include("~/Scripts/scripts-google-analytics.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/pagenotfound")
                 .Include("~/Scripts/scripts-page-not-found.js"));
+
+            bundles.Add(new StyleBundle("~/bundles/bootstrapcss", "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+                .Include("~/Content/bootstrap.min.css"));
+
+            bundles.Add(new StyleBundle("~/bundles/fonts", "https://fonts.googleapis.com/css?family=Bree+Serif"));
+
+            bundles.Add(new StyleBundle("~/bundles/generalcss")
+                .Include("~/Content/font-awesome.min.css", 
+                "~/Content/site-general.min.css"));
+
+            bundles.Add(new StyleBundle("~/bundles/indexcss")
+                .Include("~/Content/site-index.css"));
+
+            bundles.Add(new StyleBundle("~/bundles/contactcss")
+                .Include("~/Content/site-contact.css"));
+
+            bundles.Add(new StyleBundle("~/bundles/errorcss")
+                .Include("~/Content/site-error.css"));
         }
     }
 }

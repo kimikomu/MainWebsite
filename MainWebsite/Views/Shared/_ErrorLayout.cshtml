@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KM | @ViewBag.Title</title>
     @Styles.Render("~/bundles/bootstrapcss", "~/bundles/fonts", "~/bundles/css")
+    @RenderSection("Styles", false)
 </head>
 <body>
     @Html.Partial("ErrorNavbar")
@@ -23,10 +24,8 @@
     </div>
     @Html.Partial("ErrorIcons")
     @Html.Partial("Footer")
-    @Scripts.Render("~/bundles/modernizr", "~/bundles/bootstrapjs",
-            "~/bundles/jquery", "~/bundles/jqueryval", "~/bundles/jqueryvalunob")
+    @Scripts.Render("~/bundles/modernizr", "~/bundles/jquery", "~/bundles/jqueryval",
+            "~/bundles/jqueryvalunob", "~/bundles/bootstrapjs")
     @RenderSection("Scripts", false)
 </body>
 </html>
-
-

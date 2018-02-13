@@ -14,8 +14,7 @@
             var resumeButton = $("#resume-button");
 
             resumeButton.click(function () {
-                alert("I am working!");
-                //ga('send', 'event', 'View Resume from Index', 'click');
+                ga('send', 'event', 'View Resume from Index', 'click');
             });
         }
     };

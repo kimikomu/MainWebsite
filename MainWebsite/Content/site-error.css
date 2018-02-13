@@ -1,0 +1,22 @@
+﻿.error-image-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.bounce {
+    position: absolute;
+}
+
+    .bounce a {
+        color: #ef7016 !important;
+    }
+
+
+.error-message {
+    margin: 50px 0;
+}
+
+.error-button {
+    margin-top: 12px;
+}

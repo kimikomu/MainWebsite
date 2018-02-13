@@ -4,6 +4,11 @@
     Layout = "~/Views/Shared/_ErrorLayout.cshtml";
 }
 
+@section Styles
+{
+    @Styles.Render("~/bundles/errorcss")
+}
+
 <div>
     <h1 class="center error-message">404! NotFound!</h1>
 </div>

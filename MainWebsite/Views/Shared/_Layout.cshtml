@@ -13,7 +13,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KM | @ViewBag.Title</title>
-    @Styles.Render("~/bundles/bootstrapcss", "~/bundles/fonts", "~/bundles/css")
+    @Styles.Render("~/bundles/bootstrapcss", "~/bundles/fonts", "~/bundles/generalcss")
+    @RenderSection("Styles", false)
 </head>
 <body>
     @Html.Partial("Navbar")
@@ -24,8 +25,8 @@
     </div>
     @Html.Partial("Icons")
     @Html.Partial("Footer")
-    @Scripts.Render("~/bundles/modernizr", "~/bundles/bootstrapjs",
-        "~/bundles/jquery", "~/bundles/jqueryval", "~/bundles/jqueryvalunob")
+    @Scripts.Render("~/bundles/modernizr", "~/bundles/jquery", "~/bundles/jqueryval", 
+        "~/bundles/jqueryvalunob", "~/bundles/bootstrapjs")
     @RenderSection("Scripts", false)
 </body>
 </html>
