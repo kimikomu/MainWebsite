@@ -13,8 +13,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KM | @ViewBag.Title</title>
-    @Styles.Render("~/bundles/bootstrapcss", "~/bundles/fonts", "~/bundles/generalcss")
-    @RenderSection("Styles", false)
+    @*bundle all css files into one bundle and delete style render sections for individual pages*@
+    @Styles.Render("~/bundles/bootstrapcss", "~/bundles/fonts", "~/bundles/css")
 </head>
 <body>
     @Html.Partial("_Navbar")
@@ -22,6 +22,7 @@
         <div class="body-container">
             @RenderBody()
         </div>
+        @*error partial*@
         <div class="error-page-container">
             <div class="error-image-container center">
                 <a href="/">

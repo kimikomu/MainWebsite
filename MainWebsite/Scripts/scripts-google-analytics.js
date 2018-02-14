@@ -10,10 +10,7 @@
                     throw new Error(keys[i] + " needs to be initialized.");
                 }
             }
-
-            var resumeButton = $("#resume-button");
-
-            resumeButton.click(function () {
+                $("#resume-button").click(function () {
                 ga('send', 'event', 'View Resume from Index', 'click');
             });
         }

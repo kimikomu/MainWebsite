@@ -39,18 +39,9 @@ namespace MainWebsite
 
             bundles.Add(new StyleBundle("~/bundles/fonts", "https://fonts.googleapis.com/css?family=Bree+Serif"));
 
-            bundles.Add(new StyleBundle("~/bundles/generalcss")
+            bundles.Add(new StyleBundle("~/bundles/css")
                 .Include("~/Content/font-awesome.min.css", 
-                "~/Content/site-general.min.css"));
-
-            bundles.Add(new StyleBundle("~/bundles/indexcss")
-                .Include("~/Content/site-index.css"));
-
-            bundles.Add(new StyleBundle("~/bundles/contactcss")
-                .Include("~/Content/site-contact.css"));
-
-            bundles.Add(new StyleBundle("~/bundles/errorcss")
-                .Include("~/Content/site-error.css"));
+                "~/Content/site-general.min.css", "~/Content/site-index.css", "~/Content/site-contact.css", "~/Content/site-error.css"));
         }
     }
 }
