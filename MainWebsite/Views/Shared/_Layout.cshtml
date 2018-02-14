@@ -13,7 +13,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KM | @ViewBag.Title</title>
-    @*bundle all css files into one bundle and delete style render sections for individual pages*@
     @Styles.Render("~/bundles/bootstrapcss", "~/bundles/fonts", "~/bundles/css")
 </head>
 <body>
@@ -21,17 +20,6 @@
     <div class="container body-content">
         <div class="body-container">
             @RenderBody()
-        </div>
-        @*error partial*@
-        <div class="error-page-container">
-            <div class="error-image-container center">
-                <a href="/">
-                    <img class="img-fluid image-shadow-box" src="~/Content/Images/oops.jpg" />
-                </a>
-            </div>
-            <div class="center">
-                <a class="btn btn-dark error-button error-anim" href="#">Back</a>
-            </div>
         </div>
     </div>
     @Html.Partial("_Icons")
